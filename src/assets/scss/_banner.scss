@@ -1,0 +1,76 @@
+.banner {
+    padding-top: 150px;
+    @include sm {
+        padding-top: 120px;
+    }
+    &-wrap {
+        padding-top: 77px;
+        margin-bottom: 40px;
+        border-radius: 32px;
+        border: 4px solid #E23B3B;
+        background-color: #2B2B2B;
+        background-image: url(../img//banner-bg.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include lg {
+            margin-bottom: 30px;
+        }
+        @include mmd {
+            margin-bottom: 20px;
+            border-width: 2px;
+        }
+        @include sm {
+            padding-top: 30px;
+        }
+        & .title {
+            margin-bottom: -10px;
+            & img {
+                @include xl {
+                    max-width: 400px;
+                }
+                @include lg {
+                    max-width: 350px;
+                    margin-bottom: 20px;
+                }
+                @include mmd {
+                    max-width: 300px;
+                    margin-bottom: 20px;
+                }
+                @include sm {
+                    max-width: 60%;
+                }
+            }
+        }
+        & .style {
+            @include xxl {
+                max-width: 340px;
+            }
+            @include xl {
+                max-width: 330px;
+            }
+            @include lg {
+                max-width: 258px;
+            }
+            @include md {
+                max-width: 200px;
+            }
+            @include sm {
+                max-width: 85px;
+            }
+            animation: updown 3s linear infinite;
+        }
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}

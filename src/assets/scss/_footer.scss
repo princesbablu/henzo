@@ -1,0 +1,20 @@
+.footer {
+    &-box {
+        max-width: 1600px;
+        margin-inline: auto;
+    }
+    padding-top: 78px;
+    padding-bottom: 100px;
+    @include sm{
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    &-box {
+        background-size: 100% 100%;
+        padding: 303px 0 122px;
+        @include mmd{
+            padding-top: 100px;
+            padding-bottom: 30px;
+        }
+    }
+}

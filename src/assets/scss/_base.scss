@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// 
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(26px/16px);
+    color: $text;
+    font-family: $font-1;
+    background-image: url(../img/body-bg.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-2;
+    color: $heading;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    border: 1px solid $border;
+    outline: none;
+    @include transition;
+    &:focus {
+        outline: none;
+        border-color: $primary;
+    }
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn {
+    --padding-x: 59px;
+    --padding-y: 24px;
+    --color: white;
+    --border-width: 2px;
+    --border-color: #000;
+    --font-size: 32px;
+    --line-height: 90%;
+    --border-radius: 16px;
+    padding: var(--padding-y) var(--padding-x);
+    color: var(--color);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background-color: #E23B3B;
+    box-shadow: 4px 4px 0px 0px #191919;
+    @include sm {
+        --font-size: 24px;
+        --padding-x: 20px;
+        --padding-y: 15px;
+        box-shadow: 2px 2px 0px 0px #191919;
+        --border-width: 1px;
+    }
+    @include ssm {
+        --font-size: 20px;
+    }
+    &:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: $white !important;
+        box-shadow: 0 0 0;
+    }
+}
+
+// social 
+.social {
+    &-link {
+        --width: 64px;
+        width: var(--width);
+        height: var(--width);
+        background-color: $primary;
+        color: $heading;
+        box-shadow: 2px 2px 0 $black;
+        @include font-24;
+        border-radius: 8px;
+        border: 1.464px solid #00171F;
+        background: #FFF;
+        box-shadow: 2.175px 2.175px 0px 0px #000;
+        &:hover {
+            box-shadow: 0 0 0;
+        }
+        & img {
+            width: 34px;
+            @include xl {
+                width: 28px;
+            }
+            @include lg {
+                width: 28px;
+            }
+            @include mmd {
+                width: 28px;
+            }
+        }
+        @include xl {
+            --width: 54px;
+        }
+        @include lg {
+            --width: 54px;
+        }
+        @include mmd {
+            --width: 54px;
+        }
+        @include sm {
+            & svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .footer & {
+            --width: 88px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 8px;
+            border: 3px solid #2B2B2B;
+            background: #FFF;
+            box-shadow: 3px 3px 0px 0px #3E3E40;
+            &:hover {
+                box-shadow: 3px 3px 0px 0px transparent;
+            }
+            @include sm {
+                --width: 60px;
+            }
+            & img {
+                width: 45px;
+                @include sm {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+#root {
+    overflow: hidden;
+}
+
+.container {
+    @media only screen and (min-width: 1700px) {
+        max-width: 1624px;
+    }
+}

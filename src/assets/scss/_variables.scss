@@ -1,0 +1,16 @@
+@import './font';
+@import url('https://fonts.cdnfonts.com/css/super-bloom');
+$font-1:'Best Friends Font';
+$font-2:$font-1;
+$font-3:" ";
+$white:#fff;
+$black:#000;
+$primary: #E23B3B;
+$secondary: #050505;
+$text:#C0C3C5;
+$heading: $white;
+$border:#4B4B4B;
+$bg:white;
+:root {
+    scroll-behavior: auto !important;
+}
